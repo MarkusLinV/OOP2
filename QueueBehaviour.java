@@ -1,12 +1,14 @@
+import java.util.List;
+
 public interface QueueBehaviour {
 
-    void takeInQueue(Actor actor);
+    void takeInQueue(Human actor);//войти в очередь
 
     void takeOrders();// сделать заказ
 
-    void giveOrders();// забрать заказы
+    void giveOrders(Human actor, List<EProduct> products);// забрать заказы
 
-    void releaseFromQueue();// выйти из очереди
+    void releaseFromQueue(Human actor);// выйти из очереди
     
 
     
